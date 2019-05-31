@@ -1,7 +1,8 @@
 /* 
   Action Types Go Here!
   Be sure to export each action type so you can pull it into your reducer
-*/
+  */
+import axios from 'axios'
 export const FETCHING_START = 'FETCHING_START';
 export const FETCHING_SUCCESS = 'FETCHING_SUCCESS';
 export const FETCHING_FAILURE = 'FETCHING_FAILURE';
@@ -11,7 +12,6 @@ export const ADDED_SMURF = 'ADDED_SMURF';
 export const ERROR = 'ERROR';
 
 
-import axios from 'axios'
 
 export const getSmurf = () => dispatch => {
   dispatch({ type: FETCHING_START });

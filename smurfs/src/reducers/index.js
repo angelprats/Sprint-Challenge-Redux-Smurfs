@@ -1,7 +1,7 @@
 /*
   Be sure to import in all of the action types from `../actions`
 */
-import { FETCHING_START, FETCHING_SUCCESS, FETCHING_FAILURE, ADDED_SMURF } from '../actions'
+import { FETCHING_START, FETCHING_SUCCESS, FETCHING_FAILURE, ADDED_SMURF, ADD_SMURF, ERROR } from '../actions'
 
 
 const initialState = {
@@ -10,7 +10,8 @@ const initialState = {
   addingSmurf: false,
   updatingSmurf: false,
   deletingSmurf: false,
-  error: null
+  error: null,
+  newSmurf: ''
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -19,7 +20,7 @@ const rootReducer = (state = initialState, action) => {
       return { ...state, fetchingSmurfs: true };
 
     case FETCHING_SUCCESS:
-      return { ...state, fetchinSmurfs: true };
+      return { ...state, smurfs: action.payload };
 
     case FETCHING_FAILURE:
       return {
@@ -28,8 +29,18 @@ const rootReducer = (state = initialState, action) => {
 
     case ADDED_SMURF:
       return {
-        ...state, smurfs: [...action.payload]
+        ...state, newSmurf: action.payload
       }
+
+    case ADD_SMURF:
+      return { ...state, addingSmurf: true };
+
+    case ERROR:
+      return {
+        ...state, error: action.payload
+      }
+
+
 
     default: return state;
   }
