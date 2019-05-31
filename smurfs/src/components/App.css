@@ -1,5 +1,13 @@
+
+body {
+  background-color: mediumslateblue;
+  width: 50%;
+  margin: auto;
+}
+
 .App {
   text-align: center;
+  width: 80%;  
 }
 
 .App-logo {
@@ -26,3 +34,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.main-text {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+.redux-span {
+  color: crimson;
+}
+
