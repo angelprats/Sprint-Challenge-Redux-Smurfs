@@ -25,7 +25,7 @@ class SmurfList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     smurflist: state.smurflist,
     getSmurf: state.getSmurf
