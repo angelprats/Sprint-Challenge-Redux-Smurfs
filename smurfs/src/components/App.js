@@ -3,6 +3,7 @@ import './App.css';
 
 import Smurf from './Smurf';
 import SmurfList from './SmurfList';
+import Form from './Form';
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -19,6 +20,7 @@ class App extends Component {
         <div>Have fun!</div>
         {/* <Smurf /> */}
         <SmurfList />
+        <Form />
       </div>
     );
   }

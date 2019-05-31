@@ -9,12 +9,11 @@ class Form extends React.Component {
     height: ''
   }
 
-  handleImputChange = e => {
+  handleInputChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
     })
   }
-
   handleAddSmurf = e => {
     e.preventDefault();
     const smurf = this.state;
@@ -40,4 +39,4 @@ const mapStateToProps = state => ({
   smurfs: state.smurfs
 })
 
-export default connect(mapStateToProps, (addSmurf)(Form));
+export default connect(mapStateToProps, { addSmurf })(Form);
