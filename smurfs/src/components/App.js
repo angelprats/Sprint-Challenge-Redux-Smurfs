@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Smurf from './Smurf';
+
 import SmurfList from './SmurfList';
 import Form from './Form';
 /*
